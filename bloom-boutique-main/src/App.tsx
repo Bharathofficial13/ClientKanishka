@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound.tsx";
 import AdminProductsPanel from "./pages/Admin/AdminProductsPanel.tsx";
 
 const queryClient = new QueryClient();
-
+//test
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
