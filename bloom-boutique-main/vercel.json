@@ -1,28 +1,8 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "builds": [
+  "rewrites": [
     {
-      "src": "glam-grip-backend/server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "glam-grip-backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
