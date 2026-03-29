@@ -42,9 +42,9 @@ const ProductCarousel = () => {
     const fetchShopData = async () => {
       try {
         setLoading(true);
-        const catRes = await fetch("http://localhost:5000/api/categories");
+        const catRes = await fetch("https://clientkanishka.onrender.com/api/categories");
         const catData = await catRes.json();
-        const prodRes = await fetch("http://localhost:5000/api/products?limit=50");
+        const prodRes = await fetch("https://clientkanishka.onrender.com/api/products?limit=50");
         const prodData = await prodRes.json();
 
         if (catData.success) {
